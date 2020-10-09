@@ -39,6 +39,16 @@
 	<script type='application/javascript'>
 	if (!window.KTracking){window.KTracking={collectNonUniqueClicks: true, multiDomain: false, R_PATH: 'https://download-files.xyz/fgLLWt', P_PATH:'https://download-files.xyz/4947ad1/postback', listeners: [], reportConversion: function(){this.queued = arguments;}, getSubId: function(fn) {this.listeners.push(fn);}, ready: function(fn) {this.listeners.push(fn);} };}(function(){var a=document.createElement('script');a.type='application/javascript';a.async=true;a.src='https://download-files.xyz/js/k.min.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(a,s)})();
 	</script><noscript><img height='0' width='0' alt='' src='https://download-files.xyz/fgLLWt'/></noscript>
+	
+	<script>
+		function keitaro_report_conversion(link, revenue, status, tid) {
+		   KTracking.reportConversion(revenue, status, tid, function() {
+			   window.location = link.href;
+			});
+			return false;
+		}
+	</script>
+
 </head>
 <body data-rsssl=1 id="wrap-Main" class="page-template-default page page-id-2056 body-header-style1 body-show-breadcrumbs body-fullscreen-sections">
 	<div class="wrapper-Main">
@@ -215,7 +225,7 @@
 
 									<div class="col-md-12">
 									  <div class="comp-Logo">
-										<a href="richpalmscasino.html?subid={subid}" rel="nofollow" target="_blank"><img alt="" class="attachment-medium size-medium" height="140" src="richpalmscasino.png" width="293"></a>
+										<a href="richpalmscasino.html?subid={subid}" onclick="var tid = Math.floor(Math.random() * 1000000000);KTracking.reportConversion(0, 'sale', {tid: tid, utm_term: utm_term ,sub_id_10: 'Rich Palms Casino'})" rel="nofollow" target="_blank"><img alt="" class="attachment-medium size-medium" height="140" src="richpalmscasino.png" width="293"></a>
 									  </div>
 									</div>
 								  </div>
