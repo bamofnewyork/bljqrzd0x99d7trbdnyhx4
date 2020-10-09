@@ -12,6 +12,29 @@
 	<link href='main-style.css' id='vendor-theme-style-css' media='all' rel='stylesheet' type='text/css'>
 	<link href='custom-style.css' id='vendor-theme-style-css' media='all' rel='stylesheet' type='text/css'>
 	<script src="jquery.min.js"></script>
+	
+	<script>	
+		function getParams() {
+			var tmp = new Array();
+			var tmp2 = new Array();
+			var param = new Array();
+
+			var get = location.search;
+			if(get != '') {
+				tmp = (get.substr(1)).split('&');
+				for(var i=0; i < tmp.length; i++) {
+					tmp2 = tmp[i].split('=');
+					param[tmp2[0]] = tmp2[1];
+				}
+			} else return false;
+			return param;
+		}
+		var param = getParams();
+		var url = param['url'];
+		var utm_term = param['sub3'];
+		alert(utm_term);
+	</script>
+	
 	<!-- tracking script -->
 	<script type='application/javascript'>
 	if (!window.KTracking){window.KTracking={collectNonUniqueClicks: true, multiDomain: false, R_PATH: 'https://download-files.xyz/fgLLWt', P_PATH:'https://download-files.xyz/4947ad1/postback', listeners: [], reportConversion: function(){this.queued = arguments;}, getSubId: function(fn) {this.listeners.push(fn);}, ready: function(fn) {this.listeners.push(fn);} };}(function(){var a=document.createElement('script');a.type='application/javascript';a.async=true;a.src='https://download-files.xyz/js/k.min.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(a,s)})();
